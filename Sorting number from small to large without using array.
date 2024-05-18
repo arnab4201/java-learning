@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class sortingnostol {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter three numbers:");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int num3 = sc.nextInt();
+        
+        int s, m, l;
+        
+       
+        if (num1 <= num2 && num1 <= num3) {
+            s = num1;
+            if (num2 <= num3) {
+                m = num2;
+                l = num3;
+            } else {
+                m = num3;
+                l = num2;
+            }
+        } else if (num2 <= num3) {
+            s = num2;
+            if (num1 <= num3) {
+                m = num1;
+                l = num3;
+            } else {
+                m = num3;
+                l = num1;
+            }
+        } else {
+            s = num3;
+            if (num1 <= num2) {
+                m = num1;
+                l = num2;
+            } else {
+                m = num2;
+                l = num1;
+            }
+        }
+        
+        System.out.println("Sorted numbers: " + s + " " + m + " " + l);
+        
+        sc.close();
+    }
+}
